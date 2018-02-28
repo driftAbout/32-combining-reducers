@@ -32,7 +32,7 @@ class ExpenseItem extends React.Component {
   render(){
     return (
       <li className="expense-item" onDoubleClick={this.handleDoubleClick}>
-      <span className="expense-item-timeStamp">{this.props.expense.timeStamp.toDateString()}</span>
+      {/*<span className="expense-item-timeStamp">{this.props.expense.timeStamp.toDateString()}</span>*/}
         <div>
           <span className="expense-item-name">{this.props.expense.name}</span>
           <span className="expense-item-amount">{this.props.expense.amount}</span>

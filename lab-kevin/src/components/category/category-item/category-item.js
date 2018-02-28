@@ -43,14 +43,16 @@ class CategoryItem extends React.Component{
       <li className="category-list-item" onDoubleClick={this.handleDoubleClick}>
         <span className="category-timestamp">{this.props.category.timeStamp.toDateString()}</span>
         <button className="category-expense-button" onClick={this.handleToggleExpenses}>Expenses</button>
-        <p>
-          <span className="category-name">{this.props.category.name}</span>
-        <span className="category-amount">{this.props.category.amount}</span>
-        </p> 
+        <div>
+          <p>
+            <span className="category-name">{this.props.category.name}</span>
+            <span className="category-amount">{this.props.category.amount}</span>
+          </p> 
+          <button className="category-delete-btn" onClick={this.handleDelete} >NIX</button>
+        </div>
         { this.state.isVisible ?
           <ExpenseList catId={this.props.category.id}/>
           : undefined}
-        <button onClick={this.handleDelete} >Ixnay on the ottenray</button>
         { this.state.editing ? 
             <Modal onClose={this.handleClose}>
               <CategoryForm submit_text="Re-evaluation" 

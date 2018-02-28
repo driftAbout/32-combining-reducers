@@ -29,7 +29,7 @@ class ExpenseList extends React.Component{
     return (
       <ul className="expense-list">
       <li className="expense-item-add">
-      <span onClick={this.toggleForm}>New Expense</span>
+      <div onClick={this.toggleForm}>New Expense</div>
       {this.state.isVisible ?
         <CategoryForm submit_text="Procreate" onComplete={this.createExpense}/>
         : undefined}
