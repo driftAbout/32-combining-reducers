@@ -29,19 +29,19 @@ class CategoryForm extends React.Component{
   render(){
     return (
       <form className="category-form" onSubmit={this.handleSubmit} >
-      <input name="name" 
-        type="text" 
-        value={this.state.name} 
-        onChange={this.handleChange}/>
+        <input name="name" 
+          type="text" 
+          value={this.state.name} 
+          onChange={this.handleChange}/>
 
-      <label>$</label>
-      <input name='amount' 
-        type="number" 
-        min="0" 
-        step=".01" 
-        value={this.state.amount} 
-        onChange={this.handleChange}/>
-      <button type="submit" >{this.props.submit_text}</button>
+        <label>$</label>
+        <input name='amount' 
+          type="number" 
+          min="0" 
+          step=".01" 
+          value={this.state.amount} 
+          onChange={this.handleChange}/>
+        <button type="submit" >{this.props.submit_text}</button>
       </form>
     );
   }

@@ -25,6 +25,7 @@
     "sourceType": "module",
     "ecmaVersion": 6,
     "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
       "jsx": true
     }
   },
@@ -37,10 +38,10 @@
     "semi": [ "error", "always" ],
     "linebreak-style": ["error", "unix"],
     "react/jsx-uses-react": "error",
-    "react/jsx-uses-vars": "error"
+    "react/jsx-uses-vars": "error",
+    "react/prop-types": 0
   },
   "plugins": [
     "react"
   ]
 }
-
