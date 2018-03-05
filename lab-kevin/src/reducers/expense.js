@@ -1,7 +1,7 @@
 export default (state={}, action) => {
   let {type, payload} = action;
  
-  const takeAction = {} 
+  const takeAction = {}; 
   takeAction['CATEGORY_CREATE'] = category => ({...state, [category.id]: []});
   
   takeAction['CATEGORY_DELETE'] = id => {
@@ -14,11 +14,11 @@ export default (state={}, action) => {
     let tempState = {...state};
     tempState[expense.category_id].push(expense);
     return tempState;
-  }
+  };
 
   takeAction['EXPENSE_UPDATE'] = expense => {
     let tempState = {...state};
-    tempState[expense.category_id] = tempState[expense.category_id].map(exp => exp.id === expense.id ? expense : exp)
+    tempState[expense.category_id] = tempState[expense.category_id].map(exp => exp.id === expense.id ? expense : exp);
     return tempState;
   };
 
@@ -29,7 +29,7 @@ export default (state={}, action) => {
     return tempState;
   };
 
-  takeAction['EXPENSE_RESET'] = () => {};
+  takeAction['EXPENSE_RESET'] = () => ({});
 
   return takeAction[type] ? takeAction[type](payload) : state;
-}
+};
