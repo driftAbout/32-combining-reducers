@@ -8,22 +8,22 @@ const category_create = category => {
   return {
     type: 'CATEGORY_CREATE',
     payload: category,
-  }
+  };
 };
 
 const category_update = category => {
   return {
     type: 'CATEGORY_UPDATE',
     payload: category,
-  }
+  };
 };
 
 const category_delete = id => {
   return {
     type: 'CATEGORY_DELETE',
     payload: id,
-  }
-}
+  };
+};
 
 const category_reset = () => ({type: 'CATEGORY_RESET'});
 

@@ -7,21 +7,21 @@ class CategoryForm extends React.Component{
       {
         name: '',
         amount: 0,
-      }
+      };
 
-   this.handleChange = this.handleChange.bind(this);
-   this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
       
   }
 
   handleChange(e){
-    this.setState({[e.target.name]: e.target.value})
+    this.setState({[e.target.name]: e.target.value});
   }
 
   handleSubmit(e){
-    e.preventDefault()
+    e.preventDefault();
     if(!this.state.name && !this.state.amount) return;
-    this.props.onComplete(this.state)
+    this.props.onComplete(this.state);
     this.setState({name: '', amount: 0});
   }
 
